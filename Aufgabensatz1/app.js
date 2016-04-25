@@ -4,14 +4,12 @@ console.log("App gestartet \n");
 
 fs.readFile("./wolkenkratzer.json", function (err, data) { 
     
-    var arr = JSON.parse(data);
+    var jsonData = JSON.parse(data);
     
-    console.log("Name: " + arr.name);
-    console.log("Stadt: " + arr.stadt);
-    console.log("Höhe: " + arr.hoehe + "m");
-    console.log("--------------------\n");
-    
-});
-
-
-
+    for (var i = 0; i < jsonData.wolkenkratzer.length; i++) {
+    var counter = jsonData.wolkenkratzer[i];
+    console.log("Name: " + counter.name);
+    console.log("Stadt: " + counter.stadt);
+    console.log("Höhe: " + counter.hoehe + "m");
+    console.log("\n--------------------------------------\n"); 
+}});
