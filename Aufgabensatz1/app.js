@@ -1,5 +1,6 @@
 // fs initialisieren
 var fs = require("fs");
+var chalk = require("chalk");
 
 // App startet
 console.log("App gestartet \n");
@@ -17,9 +18,9 @@ fs.readFile("./wolkenkratzer.json", function (err, data) {
         var counter = jsonData.wolkenkratzer[i];
     
         // Ausgabesequenz
-        console.log("Name: " + counter.name);
-        console.log("Stadt: " + counter.stadt);
-        console.log("Höhe: " + counter.hoehe + "m");
+        console.log("Name: " + chalk.green(counter.name));
+        console.log("Stadt: " + chalk.yellow(counter.stadt));
+        console.log("Höhe: " + chalk.red(counter.hoehe + "m"));
         console.log("\n--------------------------------------\n"); 
     }
 });
