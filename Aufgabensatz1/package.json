@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "L�oesungen des ersten Aufgabensatzes",
   "main": "app.js",
+  "dependencies": {
+    "chalk": ">=1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
