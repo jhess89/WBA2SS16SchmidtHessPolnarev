@@ -11,8 +11,18 @@ fs.readFile("./wolkenkratzer.json", function (err, data) {
     // die Datei parsen 
     var jsonData = JSON.parse(data);
     
+    jsonData.wolkenkratzer.sort(function(a,b){
+        if(a.hoehe > b.hoehe){
+            return -1;
+        }
+        if(a.hoehe < b.hoehe){
+            return 1;
+        }
+        return 0;
+    });
     // Schleife um alle Elemente des JSON Elements in der app.js zu speichern
     for (var i = 0; i < jsonData.wolkenkratzer.length; i++) {
+        
         
         // Zuweisung der Elemente
         var counter = jsonData.wolkenkratzer[i];
@@ -22,5 +32,5 @@ fs.readFile("./wolkenkratzer.json", function (err, data) {
         console.log("Stadt: " + chalk.yellow(counter.stadt));
         console.log("Höhe: " + chalk.red(counter.hoehe + "m"));
         console.log("\n--------------------------------------\n"); 
-    }
+    }    
 });
