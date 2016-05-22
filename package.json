@@ -4,7 +4,8 @@
   "description": "L�oesungen der Express Aufgaben",
   "main": "app.js",
   "dependencies": {
-    "chalk": ">=1.0.0"
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +16,4 @@
   },
   "author": "Julian Hess",
   "license": "ISC"
-   "dependencies": {
-    "body-parser": "^1.15.1",
-    "express": "^4.13.4"
-}
-
 }
